@@ -5,6 +5,7 @@ migrations
 /mediafiles
 .DS_Storem
 */.DS_Store
+.venv
 .env
 .DS_Store
 .vscode/settings.json
