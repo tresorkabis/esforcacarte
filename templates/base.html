@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +11,23 @@
 
     <!-- Bootstrap -->
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-    <link href="{% static 'bootstrap/css/style.css' %}" rel="stylesheet" media="screen">
     <link href="{% static 'bootstrap/css/bootstrap-responsive.min.css' %}" rel="stylesheet" media="screen">
     <link href="{% static 'vendors/easypiechart/jquery.easy-pie-chart.css' %}" rel="stylesheet" media="screen">
     <link href="{% static 'assets/styles.css' %}" rel="stylesheet" media="screen">
     <script src="{% static 'vendors/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
 </head>
+
+<body>
+    {% include "partials/navbar.html" %}
+
+    <script src="{% static 'vendors/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendors/easypiechart/jquery.easy-pie-chart.js' %}"></script>
+    <script src="{% static 'assets/scripts.js' %}"></script>
+    <script>
+        $(function () {
+            // Easy pie charts
+            $('.chart').easyPieChart({ animate: 1000 });
+        });
+    </script>
+</body>
