@@ -10,3 +10,4 @@ migrations
 .DS_Store
 .vscode/settings.json
 /staticfiles
+settings/dev.py
