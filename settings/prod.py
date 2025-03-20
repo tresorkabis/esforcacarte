@@ -1,6 +1,8 @@
 from .base import *
-import dj_database_url
 import os
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
