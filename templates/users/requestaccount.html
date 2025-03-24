@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block meta %}
+{% endblock meta %}
+{% block content %}
+
+<div class="span9" id="content">
+    <div class="row-fluid">
+        <!-- block -->
+        <div class="row-fluid">
+            <!-- block -->
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">Demande de compte</div>
+                </div>
+                <div class="block-content collapse in">
+                    <div class="span12">
+                        <form class="form-horizontal" method="post" action="{% url 'request_account' %}">
+                            {% csrf_token %}
+                            <fieldset>
+                                <legend>Remplissez de formulaire pour faire votre demande de compte</legend>
+                                <div class="control-group">
+                                    <label class="control-label" for="username">Nom utilisateur</label>
+                                    <div class="controls">
+                                        <input class="input-xlarge focused" name="" id="username" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="email">E-mail</label>
+                                    <div class="controls">
+                                        <input class="input-xlarge focused" name="email" id="email" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Valider</button>
+                                    <button type="reset" class="btn">Réinitialiser</button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /block -->
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
